@@ -1,0 +1,3 @@
+<?php
+$bodyBG = "blue";
+?>
