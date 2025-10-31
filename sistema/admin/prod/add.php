@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	if (!$preco) {
 		$error .= " Preço obrigatório! ";
 	}
-	if (!$categoria_id) {
+	if (!$id_categoria) {
 		$error .= " Categoria obrigatória! ";
 	}
 	if (!$error) {
@@ -63,7 +63,7 @@ if (isset($error)) {
 		<tr>
 			<td style="text-align: right;">Categoria:</td>
 			<td>
-				<select name="categoria_id">
+				<select name="id_categoria">
 					<option value="">Selecione</option>
 					<?php while($cat = mysqli_fetch_assoc($categorias)): ?>
 						<option value="<?=$cat['id']?>" <?=isset($id_categoria)&&$id_categoria==$cat['id']?'selected':'';?>>
